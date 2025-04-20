@@ -1,415 +1,132 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BYTECARE.online | Consultoria em TI Especializada</title>
-    <meta name="description" content="Soluções completas em Tecnologia da Informação para sua empresa">
-    
-    <!-- Favicon embutido -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔧</text></svg>">
-    
-    <!-- CSS embutido -->
+    <meta name="description" content="BYTECARE SOLUÇÕES EM TI - Consultoria em Tecnologia da Informação">
+    <title>BYTECARE SOLUÇÕES EM TI</title>
     <style>
-        :root {
-            --primary: #0056b3;
-            --secondary: #003366;
-            --accent: #ff6b00;
-            --light: #f8f9fa;
-            --dark: #212529;
-            --whatsapp: #25D366;
-        }
-        
-        * {
+        /* Estilos gerais */
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            scroll-behavior: smooth;
         }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            background-color: #f5f7fa;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-        
         header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background-color: #0056b3;
             color: white;
+            padding: 20px;
             text-align: center;
-            padding: 2rem 1rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        
-        .logo {
-            font-size: 2.2rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
         }
-        
-        .logo span {
-            color: var(--accent);
-        }
-        
-        .tagline {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-        
-        main {
-            flex: 1;
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-            width: 100%;
-        }
-        
         .hero {
+            background-color: #ff6b00;
+            color: white;
+            padding: 100px 20px;
             text-align: center;
-            margin-bottom: 3rem;
         }
-        
-        .hero h1 {
-            font-size: 2rem;
-            color: var(--secondary);
-            margin-bottom: 1rem;
-        }
-        
         .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 3rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
         }
-        
         .service-card {
             background: white;
-            border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-        }
-        
-        .service-card h3 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-        
-        .contact-form {
-            background: white;
-            border-radius: 8px;
-            padding: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-        
-        input, textarea, select {
-            width: 100%;
-            padding: 0.8rem;
             border: 1px solid #ddd;
-            border-radius: 4px;
-            font-family: inherit;
-            font-size: 1rem;
+            border-radius: 8px;
+            margin: 10px;
+            padding: 20px;
+            width: 250px;
+            transition: transform 0.3s;
         }
-        
-        textarea {
-            min-height: 120px;
-            resize: vertical;
+        .service-card:hover {
+            transform: scale(1.05);
         }
-        
-        button {
-            border: none;
-            padding: 1rem 2rem;
-            font-size: 1rem;
-            font-weight: 600;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: filter 0.3s;
-            width: 100%;
-        }
-        
-        .btn-primary {
-            background-color: var(--accent);
-            color: white;
-        }
-        
-        .btn-primary:hover {
-            filter: brightness(0.9);
-        }
-        
-        .whatsapp-btn {
-            background-color: var(--whatsapp);
-            color: white;
-            display: inline-flex;
+        form {
+            display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            margin-top: 1rem;
+            padding: 20px;
         }
-        
-        .whatsapp-btn:hover {
-            filter: brightness(0.9);
+        input, textarea {
+            margin: 10px 0;
+            padding: 10px;
+            width: 80%;
+            max-width: 400px;
         }
-        
         footer {
-            background: var(--dark);
+            background-color: #0056b3;
             color: white;
             text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
+            padding: 10px;
         }
-        
-        .notification {
+        .whatsapp-button {
             position: fixed;
-            top: 20px;
+            bottom: 20px;
             right: 20px;
-            padding: 1rem;
-            background: var(--primary);
+            background-color: #25D366;
             color: white;
-            border-radius: 4px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-            transform: translateY(-100px);
-            opacity: 0;
-            transition: all 0.3s ease;
-            z-index: 1000;
-        }
-        
-        .notification.show {
-            transform: translateY(0);
-            opacity: 1;
-        }
-        
-        @media (max-width: 768px) {
-            .logo {
-                font-size: 1.8rem;
-            }
-            
-            .hero h1 {
-                font-size: 1.6rem;
-            }
+            border: none;
+            border-radius: 50%;
+            padding: 15px;
+            font-size: 24px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <!-- Notificação -->
-    <div id="notification" class="notification"></div>
 
-    <!-- Cabeçalho -->
-    <header>
-        <div class="logo">BYTECARE<span>.online</span></div>
-        <p class="tagline">Suporte Total em Tecnologia da Informação</p>
-    </header>
+<header>
+    <h1>BYTECARE SOLUÇÕES EM TI</h1>
+    <nav>
+        <a href="#hero">Início</a>
+        <a href="#services">Serviços</a>
+        <a href="#contact">Contato</a>
+    </nav>
+</header>
 
-    <!-- Conteúdo Principal -->
-    <main>
-        <section class="hero">
-            <h1>Soluções em TI para seu Negócio</h1>
-            <p>Consultoria especializada e suporte técnico 24/7 em São Paulo</p>
-        </section>
+<section id="hero" class="hero">
+    <h2>Transformando Tecnologia em Soluções</h2>
+    <p>Consultoria especializada em TI para o seu negócio.</p>
+    <a href="#contact" style="background-color: white; color: #0056b3; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Entre em Contato</a>
+</section>
 
-        <!-- Serviços -->
-        <section class="services" id="services">
-            <!-- Gerado dinamicamente via JavaScript -->
-        </section>
+<section id="services" class="services">
+    <div class="service-card">
+        <h3>Segurança da Informação</h3>
+        <p>Proteja seus dados e informações sensíveis.</p>
+    </div>
+    <div class="service-card">
+        <h3>Cloud Computing</h3>
+        <p>Solucione suas necessidades de armazenamento na nuvem.</p>
+    </div>
+    <div class="service-card">
+        <h3>Suporte Técnico 24/7</h3>
+        <p>Assistência técnica sempre que você precisar.</p>
+    </div>
+    <div class="service-card">
+        <h3>Redes Corporativas</h3>
+        <p>Criação e manutenção de redes seguras e eficientes.</p>
+    </div>
+    <div class="service-card">
+        <h3>Backup & Recovery</h3>
+        <p>Recuperação de dados em caso de falhas.</p>
+    </div>
+    <div class="service-card">
+        <h3>Consultoria em TI</h3>
+        <p>Orientação especializada para o seu negócio.</p>
+    </div>
+</section>
 
-        <!-- Formulário de Contato -->
-        <section class="contact-form">
-            <h2>Entre em Contato</h2>
-            <form id="contactForm">
-                <div class="form-group">
-                    <label for="name">Nome Completo</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="phone">Telefone</label>
-                    <input type="tel" id="phone" name="phone" placeholder="(11) 98765-4321">
-                </div>
-                
-                <div class="form-group">
-                    <label for="service">Serviço de Interesse</label>
-                    <select id="service" name="service" required>
-                        <option value="">Selecione...</option>
-                        <option value="seguranca">Segurança da Informação</option>
-                        <option value="cloud">Cloud Computing</option>
-                        <option value="suporte">Suporte Técnico</option>
-                        <option value="redes">Redes Corporativas</option>
-                        <option value="consultoria">Consultoria em TI</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Mensagem</label>
-                    <textarea id="message" name="message" required placeholder="Descreva sua necessidade"></textarea>
-                </div>
-                
-                <button type="submit" class="btn-primary">Enviar Mensagem</button>
-                
-                <button type="button" class="whatsapp-btn" id="whatsappBtn">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                    </svg>
-                    WhatsApp (11) 97476-4971
-                </button>
-            </form>
-        </section>
-    </main>
-
-    <!-- Rodapé -->
-    <footer>
-        <p>BYTECARE SOLUÇÕES EM TI</p>
-        <p>contato@bytecare.online | (11) 97476-4971</p>
-        <p>© <span id="currentYear"></span> - Todos os direitos reservados</p>
-    </footer>
-
-    <!-- JavaScript embutido -->
-    <script>
-        // Dados dos serviços
-        const servicesData = [
-            {
-                title: "Segurança da Informação",
-                description: "Proteção contra ameaças cibernéticas com firewall, antivírus e políticas de segurança.",
-                icon: "🔒"
-            },
-            {
-                title: "Cloud Computing",
-                description: "Soluções em nuvem para armazenamento seguro e alta disponibilidade.",
-                icon: "☁️"
-            },
-            {
-                title: "Suporte Técnico",
-                description: "Assistência remota e presencial para computadores e redes corporativas.",
-                icon: "🛠️"
-            },
-            {
-                title: "Redes Corporativas",
-                description: "Projeto, implementação e manutenção de infraestrutura de redes.",
-                icon: "🌐"
-            },
-            {
-                title: "Backup & Recovery",
-                description: "Soluções completas para proteção de dados e recuperação de desastres.",
-                icon: "💾"
-            },
-            {
-                title: "Consultoria em TI",
-                description: "Análise e planejamento estratégico de tecnologia para seu negócio.",
-                icon: "📊"
-            }
-        ];
-
-        // Elementos DOM
-        const notification = document.getElementById('notification');
-        const servicesContainer = document.getElementById('services');
-        const contactForm = document.getElementById('contactForm');
-        const whatsappBtn = document.getElementById('whatsappBtn');
-
-        // Mostrar notificação
-        function showNotification(message, isSuccess = true) {
-            notification.textContent = message;
-            notification.style.backgroundColor = isSuccess ? 'var(--primary)' : '#dc3545';
-            notification.classList.add('show');
-            
-            setTimeout(() => {
-                notification.classList.remove('show');
-            }, 3000);
-        }
-
-        // Carregar serviços
-        function loadServices() {
-            servicesData.forEach(service => {
-                const card = document.createElement('div');
-                card.className = 'service-card';
-                card.innerHTML = `
-                    <h3>${service.icon} ${service.title}</h3>
-                    <p>${service.description}</p>
-                `;
-                servicesContainer.appendChild(card);
-            });
-        }
-
-        // Enviar formulário
-        async function handleSubmit(e) {
-            e.preventDefault();
-            
-            const formData = new FormData(contactForm);
-            const data = Object.fromEntries(formData.entries());
-            
-            // Validação simples
-            if (!data.name || !data.email || !data.message) {
-                showNotification('Preencha todos os campos obrigatórios', false);
-                return;
-            }
-            
-            try {
-                // Simular envio para Cloudflare Function
-                const response = await fetch('/api/contato', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(data)
-                });
-                
-                if (response.ok) {
-                    showNotification('Mensagem enviada com sucesso!');
-                    contactForm.reset();
-                } else {
-                    throw new Error('Erro no servidor');
-                }
-            } catch (error) {
-                showNotification('Erro ao enviar. Tente novamente ou use o WhatsApp.', false);
-                console.error('Erro:', error);
-            }
-        }
-
-        // Abrir WhatsApp
-        function openWhatsApp() {
-            const message = `Olá BYTECARE, gostaria de informações sobre:
-- Nome: ${document.getElementById('name').value || 'Não informado'}
-- Serviço: ${document.getElementById('service').value || 'Não especificado'}`;
-            
-            window.open(`https://wa.me/5511974764971?text=${encodeURIComponent(message)}`, '_blank');
-        }
-
-        // Inicialização
-        document.addEventListener('DOMContentLoaded', function() {
-            // Atualiza o ano no footer
-            document.getElementById('currentYear').textContent = new Date().getFullYear();
-            
-            // Carrega os serviços
-            loadServices();
-            
-            // Configura o formulário
-            contactForm.addEventListener('submit', handleSubmit);
-            
-            // Configura o botão do WhatsApp
-            whatsappBtn.addEventListener('click', openWhatsApp);
-        });
-    </script>
-</body>
-</html>
+<section id="contact">
+    <h2>Entre em Contato</h2>
+    <form id="contactForm">
+        <input type="text" id="name" placeholder="Seu Nome" required>
+        <input type
