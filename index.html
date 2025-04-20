@@ -3,16 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BYTECARE.online | Consultoria em TI Especializada</title>
-    <meta name="description" content="Soluções completas em Tecnologia da Informação para sua empresa. Suporte 24/7, segurança de dados e infraestrutura cloud.">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔧</text></svg>">
+    <title>BYTECARE.online | Consultoria em TI</title>
+    <meta name="description" content="Soluções completas em Tecnologia da Informação">
     
     <!-- CSS Incorporado -->
     <style>
@@ -24,17 +16,13 @@
             --dark: #212529;
         }
         
-        * {
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
             color: var(--dark);
-            background-color: #f5f7fa;
+            background: #f5f7fa;
         }
         
         header {
@@ -45,9 +33,8 @@
         }
         
         .logo {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 700;
+            font-size: 2rem;
+            font-weight: bold;
             margin-bottom: 0.5rem;
         }
         
@@ -55,53 +42,25 @@
             color: var(--accent);
         }
         
-        .hero {
-            max-width: 1200px;
+        main {
+            max-width: 800px;
             margin: 2rem auto;
             padding: 0 1rem;
-            text-align: center;
         }
         
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            padding: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .service-card {
+        form {
             background: white;
-            border-radius: 8px;
             padding: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .contact-form {
-            max-width: 600px;
-            margin: 2rem auto;
-            padding: 2rem;
-            background: white;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        
-        .form-group {
-            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         
         input, textarea, button {
             width: 100%;
             padding: 0.8rem;
+            margin-bottom: 1rem;
             border: 1px solid #ddd;
             border-radius: 4px;
-            font-family: inherit;
         }
         
         button {
@@ -110,116 +69,65 @@
             border: none;
             font-weight: bold;
             cursor: pointer;
-            transition: background 0.3s;
-        }
-        
-        button:hover {
-            background: #e05d00;
         }
         
         footer {
-            background: var(--dark);
-            color: white;
             text-align: center;
             padding: 2rem;
-            margin-top: 3rem;
-        }
-        
-        @media (max-width: 768px) {
-            .logo {
-                font-size: 2rem;
-            }
+            background: var(--dark);
+            color: white;
         }
     </style>
 </head>
 <body>
-    <!-- Cabeçalho -->
     <header>
         <div class="logo">BYTECARE<span>.online</span></div>
-        <p>Suporte Total em Tecnologia da Informação</p>
+        <p>Suporte Técnico Especializado em TI</p>
     </header>
 
-    <!-- Conteúdo Principal -->
     <main>
-        <section class="hero">
-            <h1>Soluções em TI para seu Negócio</h1>
-            <p>Consultoria especializada, suporte técnico 24/7 e implementação de infraestrutura de TI sob medida.</p>
-        </section>
-
-        <!-- Serviços -->
-        <section class="services">
-            <div class="service-card">
-                <h3>Segurança da Informação</h3>
-                <p>Proteção contra ameaças cibernéticas com firewall, antivírus e políticas de segurança.</p>
-            </div>
-            
-            <div class="service-card">
-                <h3>Cloud Computing</h3>
-                <p>Soluções em nuvem para armazenamento seguro e alta disponibilidade.</p>
-            </div>
-            
-            <div class="service-card">
-                <h3>Suporte Técnico</h3>
-                <p>Assistência remota e presencial para computadores e redes corporativas.</p>
-            </div>
-        </section>
-
-        <!-- Formulário de Contato -->
-        <section class="contact-form">
-            <h2>Entre em Contato</h2>
-            <form id="contactForm">
-                <div class="form-group">
-                    <input type="text" placeholder="Nome completo" required>
-                </div>
-                
-                <div class="form-group">
-                    <input type="email" placeholder="E-mail corporativo" required>
-                </div>
-                
-                <div class="form-group">
-                    <input type="tel" placeholder="Telefone (opcional)">
-                </div>
-                
-                <div class="form-group">
-                    <textarea placeholder="Como podemos ajudar?" rows="5" required></textarea>
-                </div>
-                
-                <button type="submit">Solicitar Consultoria</button>
-            </form>
-        </section>
+        <h1>Serviços de TI Profissionais</h1>
+        
+        <form id="contactForm">
+            <h2>Contato Rápido</h2>
+            <input type="text" name="nome" placeholder="Seu nome" required>
+            <input type="email" name="email" placeholder="Seu e-mail" required>
+            <textarea name="mensagem" placeholder="Como podemos ajudar?" rows="4" required></textarea>
+            <button type="submit">Enviar Mensagem</button>
+        </form>
     </main>
 
-    <!-- Rodapé -->
     <footer>
-        <p>BYTECARE SOLUÇÕES EM TI</p>
-        <p>(11) 97476-4971 | contato@bytecare.online</p>
-        <p>© <span id="currentYear"></span> - Todos os direitos reservados</p>
+        <p>© <span id="year"></span> BYTECARE - (11) 97476-4971</p>
     </footer>
 
     <!-- JavaScript Incorporado -->
     <script>
         // Atualiza o ano no footer
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        document.getElementById('year').textContent = new Date().getFullYear();
         
-        // Formulário de contato
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
+        // Formulário com Fetch API (Cloudflare Pages Functions)
+        document.getElementById('contactForm').addEventListener('submit', async (e) => {
             e.preventDefault();
             
-            // Simulação de envio
-            alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
-            this.reset();
+            const formData = new FormData(e.target);
             
-            // Em produção, substituir por:
-            // fetch('https://api.bytecare.online/contato', {
-            //   method: 'POST',
-            //   body: new FormData(this)
-            // });
+            try {
+                const response = await fetch('/api/contato', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                if (response.ok) {
+                    alert('Mensagem enviada! Entraremos em contato em breve.');
+                    e.target.reset();
+                } else {
+                    throw new Error('Falha no envio');
+                }
+            } catch (error) {
+                alert('Erro ao enviar. Tente novamente ou ligue para (11) 97476-4971');
+            }
         });
-        
-        // Botão do WhatsApp
-        function openWhatsApp() {
-            window.open('https://wa.me/5511974764971?text=Olá,%20gostaria%20de%20informações%20sobre%20serviços%20de%20TI');
-        }
     </script>
 </body>
 </html>
